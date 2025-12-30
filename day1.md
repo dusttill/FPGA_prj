@@ -31,12 +31,11 @@ module led
 (
     //端口定义
     input wire key_in,//按键K1
-    output reg led_out
+    output wire led_out
 );
 
-initial begin
-    led_out = key_in;//将按键K1的输入值赋给LED灯的输出值
-end 
+// 使用连续赋值，让输出实时跟随输入变化
+assign led_out = key_in;
 
 endmodule
 ```
