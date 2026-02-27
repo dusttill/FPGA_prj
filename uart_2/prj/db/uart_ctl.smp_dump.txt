@@ -1,0 +1,5 @@
+
+State Machine - |uart_ctl|uart_tx:u_uart_tx|state
+Name state.S_SEND 
+state.S_IDLE 0 
+state.S_SEND 1 

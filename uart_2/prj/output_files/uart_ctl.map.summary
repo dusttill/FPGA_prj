@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Feb  1 21:24:18 2026
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : uart_ctl
+Top-level Entity Name : uart_ctl
+Family : Cyclone IV E
+Total logic elements : 172
+    Total combinational functions : 164
+    Dedicated logic registers : 114
+Total registers : 114
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
