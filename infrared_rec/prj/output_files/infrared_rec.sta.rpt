@@ -1,0 +1,1245 @@
+Timing Analyzer report for infrared_rec
+Thu Jan 29 19:29:02 2026
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; infrared_rec                                           ;
+; Device Family         ; Cyclone IV E                                           ;
+; Device Name           ; EP4CE6E22C8                                            ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Combined                                               ;
+; Rise/Fall Delays      ; Enabled                                                ;
++-----------------------+--------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.13        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.9%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 188.22 MHz ; 188.22 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -4.313 ; -273.441           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.433 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -130.882                         ;
++-------+--------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                      ;
++--------+-------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.313 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]     ; clk          ; clk         ; 1.000        ; -0.082     ; 5.232      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.120 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.074     ; 5.047      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -4.024 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.951      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.992 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.919      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.954 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.881      ;
+; -3.938 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.334      ;
+; -3.930 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.326      ;
+; -3.915 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.311      ;
+; -3.911 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.396      ; 5.308      ;
+; -3.910 ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.396      ; 5.307      ;
+; -3.909 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.305      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.892 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.819      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.884 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.074     ; 4.811      ;
+; -3.837 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.233      ;
+; -3.825 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.221      ;
+; -3.823 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.395      ; 5.219      ;
++--------+-------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                 ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.433 ; Infrared_Standard_NEC:u_ir_new|shift_reg[31]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[31]     ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.445 ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 0.000        ; 0.101      ; 0.758      ;
+; 0.453 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[0]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[0]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[5]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[5]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[2]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[2]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[3]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[3]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[4]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[4]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[1]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[1]        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.508 ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.802      ;
+; 0.508 ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.802      ;
+; 0.509 ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.803      ;
+; 0.509 ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.803      ;
+; 0.526 ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.820      ;
+; 0.531 ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.825      ;
+; 0.533 ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.827      ;
+; 0.535 ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.827      ;
+; 0.536 ; digi_tube_drv:u_digi_tube_drv|bit_sel[3]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.828      ;
+; 0.649 ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.943      ;
+; 0.697 ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 0.000        ; 0.082      ; 0.991      ;
+; 0.724 ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.018      ;
+; 0.724 ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.018      ;
+; 0.729 ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.023      ;
+; 0.731 ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; Infrared_Standard_NEC:u_ir_new|data_out[2]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.024      ;
+; 0.732 ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.026      ;
+; 0.735 ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; Infrared_Standard_NEC:u_ir_new|data_out[1]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.028      ;
+; 0.747 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
+; 0.747 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
+; 0.747 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
+; 0.748 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.750 ; Infrared_Standard_NEC:u_ir_new|ir_reg1           ; Infrared_Standard_NEC:u_ir_new|ir_reg2           ; clk          ; clk         ; 0.000        ; 0.081      ; 1.043      ;
+; 0.760 ; Infrared_Standard_NEC:u_ir_new|us_cnt[1]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[1]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.054      ;
+; 0.761 ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.055      ;
+; 0.762 ; Infrared_Standard_NEC:u_ir_new|us_cnt[15]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[15]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.056      ;
+; 0.762 ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.763 ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.764 ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.058      ;
+; 0.764 ; digi_tube_drv:u_digi_tube_drv|cnt[15]            ; digi_tube_drv:u_digi_tube_drv|cnt[15]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.765 ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.059      ;
+; 0.765 ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; digi_tube_drv:u_digi_tube_drv|cnt[9]             ; digi_tube_drv:u_digi_tube_drv|cnt[9]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.766 ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.767 ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; digi_tube_drv:u_digi_tube_drv|cnt[10]            ; digi_tube_drv:u_digi_tube_drv|cnt[10]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.773 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.065      ;
+; 0.776 ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[3]         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.068      ;
+; 0.777 ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.069      ;
+; 0.786 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.080      ;
+; 0.787 ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.788 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.082      ;
+; 0.788 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.082      ;
+; 0.788 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.082      ;
+; 0.899 ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; Infrared_Standard_NEC:u_ir_new|data_out[3]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.192      ;
+; 0.910 ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.204      ;
+; 0.911 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.205      ;
+; 0.913 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.207      ;
+; 0.914 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.208      ;
+; 0.915 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.209      ;
+; 0.916 ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.209      ;
+; 0.918 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.212      ;
+; 0.920 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.214      ;
+; 0.927 ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; clk          ; clk         ; 0.000        ; 0.101      ; 1.240      ;
+; 0.932 ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; Infrared_Standard_NEC:u_ir_new|data_out[5]       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.225      ;
+; 0.940 ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 0.000        ; 0.101      ; 1.253      ;
+; 0.945 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.239      ;
+; 0.947 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.241      ;
+; 0.948 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.242      ;
+; 0.949 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.243      ;
+; 0.951 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.243      ;
+; 0.966 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.260      ;
+; 0.968 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.262      ;
+; 1.053 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.347      ;
+; 1.056 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.350      ;
+; 1.058 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.352      ;
+; 1.060 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.354      ;
+; 1.061 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.355      ;
+; 1.074 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.368      ;
+; 1.101 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.393      ;
+; 1.101 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.393      ;
+; 1.102 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.394      ;
+; 1.108 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.400      ;
+; 1.111 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.403      ;
+; 1.116 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.410      ;
+; 1.116 ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.410      ;
+; 1.116 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.410      ;
+; 1.117 ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
+; 1.117 ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
+; 1.117 ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; clk          ; clk         ; 0.000        ; 0.082      ; 1.411      ;
+; 1.117 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 199.6 MHz ; 199.6 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -4.010 ; -248.903          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.382 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -130.882                        ;
++-------+--------+---------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                       ;
++--------+-------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.010 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]     ; clk          ; clk         ; 1.000        ; -0.073     ; 4.939      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.748 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.684      ;
+; -3.709 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.373      ; 5.084      ;
+; -3.682 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.373      ; 5.057      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.649 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.585      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.623 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.559      ;
+; -3.610 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.373      ; 4.985      ;
+; -3.599 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.373      ; 4.974      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.584 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.520      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.566 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.502      ;
+; -3.555 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.374      ; 4.931      ;
+; -3.554 ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.374      ; 4.930      ;
+; -3.538 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE  ; clk          ; clk         ; 1.000        ; 0.373      ; 4.913      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.531 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30] ; clk          ; clk         ; 1.000        ; -0.066     ; 4.467      ;
+; -3.511 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.373      ; 4.886      ;
+; -3.498 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE  ; clk          ; clk         ; 1.000        ; 0.374      ; 4.874      ;
++--------+-------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                  ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.382 ; Infrared_Standard_NEC:u_ir_new|shift_reg[31]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[31]     ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.397 ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 0.000        ; 0.092      ; 0.684      ;
+; 0.402 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[0]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[0]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[5]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[5]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[2]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[2]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[3]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[3]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[4]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[4]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[1]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[1]        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.477 ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.745      ;
+; 0.477 ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.745      ;
+; 0.478 ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.746      ;
+; 0.479 ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.747      ;
+; 0.492 ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.760      ;
+; 0.497 ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.765      ;
+; 0.498 ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.766      ;
+; 0.499 ; digi_tube_drv:u_digi_tube_drv|bit_sel[3]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.766      ;
+; 0.501 ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.768      ;
+; 0.607 ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.875      ;
+; 0.644 ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.912      ;
+; 0.647 ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; Infrared_Standard_NEC:u_ir_new|data_out[2]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.915      ;
+; 0.650 ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; Infrared_Standard_NEC:u_ir_new|data_out[1]       ; clk          ; clk         ; 0.000        ; 0.073      ; 0.918      ;
+; 0.667 ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.935      ;
+; 0.668 ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.936      ;
+; 0.673 ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.941      ;
+; 0.677 ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.945      ;
+; 0.694 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
+; 0.694 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
+; 0.695 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
+; 0.695 ; Infrared_Standard_NEC:u_ir_new|ir_reg1           ; Infrared_Standard_NEC:u_ir_new|ir_reg2           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
+; 0.696 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
+; 0.697 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.705 ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
+; 0.705 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
+; 0.706 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
+; 0.706 ; Infrared_Standard_NEC:u_ir_new|us_cnt[1]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[1]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
+; 0.706 ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; Infrared_Standard_NEC:u_ir_new|us_cnt[15]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[15]        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; digi_tube_drv:u_digi_tube_drv|cnt[15]            ; digi_tube_drv:u_digi_tube_drv|cnt[15]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; digi_tube_drv:u_digi_tube_drv|cnt[9]             ; digi_tube_drv:u_digi_tube_drv|cnt[9]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.711 ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; digi_tube_drv:u_digi_tube_drv|cnt[10]            ; digi_tube_drv:u_digi_tube_drv|cnt[10]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.713 ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.980      ;
+; 0.721 ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.988      ;
+; 0.722 ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[3]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.989      ;
+; 0.723 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.990      ;
+; 0.730 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; clk          ; clk         ; 0.000        ; 0.073      ; 0.998      ;
+; 0.733 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; clk          ; clk         ; 0.000        ; 0.073      ; 1.001      ;
+; 0.733 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]         ; clk          ; clk         ; 0.000        ; 0.073      ; 1.001      ;
+; 0.733 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]         ; clk          ; clk         ; 0.000        ; 0.073      ; 1.001      ;
+; 0.734 ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.001      ;
+; 0.811 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.080      ;
+; 0.813 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.082      ;
+; 0.813 ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; Infrared_Standard_NEC:u_ir_new|data_out[3]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.081      ;
+; 0.814 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.083      ;
+; 0.815 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.084      ;
+; 0.818 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.087      ;
+; 0.825 ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.093      ;
+; 0.838 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.107      ;
+; 0.852 ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.120      ;
+; 0.852 ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; clk          ; clk         ; 0.000        ; 0.092      ; 1.139      ;
+; 0.854 ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; Infrared_Standard_NEC:u_ir_new|data_out[5]       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.122      ;
+; 0.864 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.131      ;
+; 0.876 ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 0.000        ; 0.092      ; 1.163      ;
+; 0.879 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.148      ;
+; 0.881 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.150      ;
+; 0.881 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.150      ;
+; 0.882 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.151      ;
+; 0.892 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.161      ;
+; 0.895 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.164      ;
+; 0.959 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.228      ;
+; 0.961 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.230      ;
+; 0.963 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.232      ;
+; 0.964 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.233      ;
+; 0.966 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.235      ;
+; 0.979 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.074      ; 1.248      ;
+; 1.013 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.280      ;
+; 1.018 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.285      ;
+; 1.018 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.285      ;
+; 1.019 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.286      ;
+; 1.021 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.288      ;
+; 1.026 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.027 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.326 ; -70.584           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.179 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -94.720                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                           ;
++--------+-------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.326 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]         ; clk          ; clk         ; 1.000        ; -0.036     ; 2.277      ;
+; -1.217 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.359      ;
+; -1.215 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.357      ;
+; -1.194 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.336      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.183 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.142      ;
+; -1.167 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.309      ;
+; -1.159 ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.301      ;
+; -1.157 ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.299      ;
+; -1.134 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.276      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.091      ;
+; -1.132 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.274      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.128 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.087      ;
+; -1.124 ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]  ; digi_tube_drv:u_digi_tube_drv|seg_out[6]         ; clk          ; clk         ; 1.000        ; -0.029     ; 2.082      ;
+; -1.123 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.265      ;
+; -1.121 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10] ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.263      ;
+; -1.117 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.156      ; 2.260      ;
+; -1.108 ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.156      ; 2.251      ;
+; -1.102 ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]  ; digi_tube_drv:u_digi_tube_drv|seg_out[6]         ; clk          ; clk         ; 1.000        ; -0.029     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.101 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.060      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.095 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; clk          ; clk         ; 1.000        ; -0.028     ; 2.054      ;
+; -1.090 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.156      ; 2.233      ;
+; -1.081 ; Infrared_Standard_NEC:u_ir_new|us_cnt[3]  ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 1.000        ; 0.156      ; 2.224      ;
+; -1.074 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]  ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 1.000        ; 0.155      ; 2.216      ;
+; -1.061 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11] ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; clk          ; clk         ; 1.000        ; 0.155      ; 2.203      ;
+; -1.061 ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]  ; digi_tube_drv:u_digi_tube_drv|seg_out[6]         ; clk          ; clk         ; 1.000        ; -0.029     ; 2.019      ;
+; -1.054 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 1.000        ; -0.027     ; 2.014      ;
+; -1.054 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 1.000        ; -0.027     ; 2.014      ;
+; -1.054 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 1.000        ; -0.027     ; 2.014      ;
+; -1.054 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 1.000        ; -0.027     ; 2.014      ;
+; -1.054 ; Infrared_Standard_NEC:u_ir_new|us_cnt[2]  ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 1.000        ; -0.027     ; 2.014      ;
++--------+-------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                  ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.179 ; Infrared_Standard_NEC:u_ir_new|shift_reg[31]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[31]     ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.186 ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; clk          ; clk         ; 0.000        ; 0.044      ; 0.314      ;
+; 0.187 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[0]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[0]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[5]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[5]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[2]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[2]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[3]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[3]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[4]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[4]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Infrared_Standard_NEC:u_ir_new|bit_cnt[1]        ; Infrared_Standard_NEC:u_ir_new|bit_cnt[1]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.197 ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.318      ;
+; 0.197 ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.318      ;
+; 0.197 ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[28]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.318      ;
+; 0.199 ; Infrared_Standard_NEC:u_ir_new|shift_reg[27]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[26]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.320      ;
+; 0.205 ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.326      ;
+; 0.207 ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.328      ;
+; 0.208 ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[16]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.329      ;
+; 0.209 ; digi_tube_drv:u_digi_tube_drv|bit_sel[3]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
+; 0.211 ; digi_tube_drv:u_digi_tube_drv|bit_sel[0]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.331      ;
+; 0.258 ; Infrared_Standard_NEC:u_ir_new|shift_reg[25]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.379      ;
+; 0.266 ; Infrared_Standard_NEC:u_ir_new|shift_reg[24]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.387      ;
+; 0.278 ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; Infrared_Standard_NEC:u_ir_new|data_out[2]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.398      ;
+; 0.279 ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.400      ;
+; 0.279 ; Infrared_Standard_NEC:u_ir_new|shift_reg[30]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[29]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.400      ;
+; 0.281 ; Infrared_Standard_NEC:u_ir_new|shift_reg[17]     ; Infrared_Standard_NEC:u_ir_new|data_out[1]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.401      ;
+; 0.281 ; Infrared_Standard_NEC:u_ir_new|shift_reg[20]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.402      ;
+; 0.284 ; Infrared_Standard_NEC:u_ir_new|shift_reg[23]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.405      ;
+; 0.294 ; Infrared_Standard_NEC:u_ir_new|ir_reg1           ; Infrared_Standard_NEC:u_ir_new|ir_reg2           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.415      ;
+; 0.299 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.304 ; Infrared_Standard_NEC:u_ir_new|us_cnt[15]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[15]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; digi_tube_drv:u_digi_tube_drv|cnt[15]            ; digi_tube_drv:u_digi_tube_drv|cnt[15]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Infrared_Standard_NEC:u_ir_new|us_cnt[1]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[1]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[9]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; digi_tube_drv:u_digi_tube_drv|cnt[9]             ; digi_tube_drv:u_digi_tube_drv|cnt[9]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.307 ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.308 ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; digi_tube_drv:u_digi_tube_drv|cnt[10]            ; digi_tube_drv:u_digi_tube_drv|cnt[10]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.311 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[0]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.431      ;
+; 0.312 ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[3]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.432      ;
+; 0.314 ; digi_tube_drv:u_digi_tube_drv|bit_sel[1]         ; digi_tube_drv:u_digi_tube_drv|bit_sel[2]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.434      ;
+; 0.317 ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; digi_tube_drv:u_digi_tube_drv|cnt[0]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.318 ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[7]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.438      ;
+; 0.319 ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[10]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.439      ;
+; 0.319 ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[8]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.439      ;
+; 0.319 ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[4]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.439      ;
+; 0.342 ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; Infrared_Standard_NEC:u_ir_new|data_out[3]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.462      ;
+; 0.345 ; Infrared_Standard_NEC:u_ir_new|shift_reg[22]     ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.465      ;
+; 0.347 ; Infrared_Standard_NEC:u_ir_new|shift_reg[21]     ; Infrared_Standard_NEC:u_ir_new|data_out[5]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.467      ;
+; 0.347 ; Infrared_Standard_NEC:u_ir_new|shift_reg[19]     ; Infrared_Standard_NEC:u_ir_new|shift_reg[18]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.468      ;
+; 0.361 ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; Infrared_Standard_NEC:u_ir_new|state.S_DATA_RECV ; clk          ; clk         ; 0.000        ; 0.044      ; 0.489      ;
+; 0.367 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.488      ;
+; 0.367 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.487      ;
+; 0.369 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.490      ;
+; 0.370 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.491      ;
+; 0.371 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.492      ;
+; 0.373 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.494      ;
+; 0.374 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.495      ;
+; 0.375 ; Infrared_Standard_NEC:u_ir_new|data_out[4]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.496      ;
+; 0.376 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.497      ;
+; 0.377 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.498      ;
+; 0.378 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.499      ;
+; 0.380 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.501      ;
+; 0.382 ; Infrared_Standard_NEC:u_ir_new|data_out[0]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.503      ;
+; 0.386 ; Infrared_Standard_NEC:u_ir_new|state.S_DONE      ; Infrared_Standard_NEC:u_ir_new|state.S_IDLE      ; clk          ; clk         ; 0.000        ; 0.044      ; 0.514      ;
+; 0.426 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[5]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.547      ;
+; 0.430 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[4]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.551      ;
+; 0.431 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[2]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.552      ;
+; 0.433 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[0]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.554      ;
+; 0.433 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[1]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.554      ;
+; 0.434 ; Infrared_Standard_NEC:u_ir_new|data_out[6]       ; digi_tube_drv:u_digi_tube_drv|seg_out[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.555      ;
+; 0.448 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[3]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[4]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[5]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[6]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; Infrared_Standard_NEC:u_ir_new|tick_cnt[1]       ; Infrared_Standard_NEC:u_ir_new|tick_cnt[2]       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.454 ; Infrared_Standard_NEC:u_ir_new|us_cnt[5]         ; Infrared_Standard_NEC:u_ir_new|us_cnt[6]         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; digi_tube_drv:u_digi_tube_drv|cnt[5]             ; digi_tube_drv:u_digi_tube_drv|cnt[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; Infrared_Standard_NEC:u_ir_new|us_cnt[13]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[14]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; digi_tube_drv:u_digi_tube_drv|cnt[1]             ; digi_tube_drv:u_digi_tube_drv|cnt[2]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; digi_tube_drv:u_digi_tube_drv|cnt[3]             ; digi_tube_drv:u_digi_tube_drv|cnt[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; digi_tube_drv:u_digi_tube_drv|cnt[13]            ; digi_tube_drv:u_digi_tube_drv|cnt[14]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; Infrared_Standard_NEC:u_ir_new|us_cnt[11]        ; Infrared_Standard_NEC:u_ir_new|us_cnt[12]        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; digi_tube_drv:u_digi_tube_drv|cnt[11]            ; digi_tube_drv:u_digi_tube_drv|cnt[12]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.455 ; digi_tube_drv:u_digi_tube_drv|cnt[7]             ; digi_tube_drv:u_digi_tube_drv|cnt[8]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
++-------+--------------------------------------------------+--------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.313   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -4.313   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -273.441 ; 0.0   ; 0.0      ; 0.0     ; -130.882            ;
+;  clk             ; -273.441 ; 0.000 ; N/A      ; N/A     ; -130.882            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; tube_seg[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_seg[7]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_bit[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_bit[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_bit[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tube_bit[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ir_in                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tube_seg[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.33 V              ; -0.00425 V          ; 0.168 V                              ; 0.058 V                              ; 3.12e-09 s                  ; 2.87e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.33 V             ; -0.00425 V         ; 0.168 V                             ; 0.058 V                             ; 3.12e-09 s                 ; 2.87e-09 s                 ; Yes                       ; Yes                       ;
+; tube_bit[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; led           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tube_seg[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.33 V              ; -0.00229 V          ; 0.111 V                              ; 0.057 V                              ; 3.78e-09 s                  ; 3.5e-09 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.33 V             ; -0.00229 V         ; 0.111 V                             ; 0.057 V                             ; 3.78e-09 s                 ; 3.5e-09 s                  ; Yes                       ; Yes                       ;
+; tube_bit[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; led           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tube_seg[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_seg[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.64 V              ; -0.0113 V           ; 0.208 V                              ; 0.179 V                              ; 2.38e-09 s                  ; 2.23e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.64 V             ; -0.0113 V          ; 0.208 V                             ; 0.179 V                             ; 2.38e-09 s                 ; 2.23e-09 s                 ; No                        ; Yes                       ;
+; tube_bit[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; tube_bit[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; led           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2355     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2355     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 78    ; 78   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 19    ; 19   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; ir_in      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; led         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; ir_in      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; led         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_bit[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tube_seg[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Thu Jan 29 19:28:59 2026
+Info: Command: quartus_sta infrared_rec -c infrared_rec
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'infrared_rec.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.313
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.313            -273.441 clk 
+Info (332146): Worst-case hold slack is 0.433
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.433               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -130.882 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.010
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.010            -248.903 clk 
+Info (332146): Worst-case hold slack is 0.382
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.382               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -130.882 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.326
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.326             -70.584 clk 
+Info (332146): Worst-case hold slack is 0.179
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.179               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -94.720 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Thu Jan 29 19:29:02 2026
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
+
+

@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Software/FPGA/FPGA_Project/infrared_rec/prj/simulation/modelsim
+vdigi_tube_drv
+Z1 !s110 1769671390
+!i10b 1
+!s100 niT:GoB<An:0nH^_]m3N=2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXF6k9]aaXgX<F;`0JbCXc3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1769654393
+8D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/digi_tube_drv.v
+FD:/Software/FPGA/FPGA_Project/infrared_rec/rtl/digi_tube_drv.v
+!i122 2
+L0 1 75
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1769671390.000000
+!s107 D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/digi_tube_drv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Software/FPGA/FPGA_Project/infrared_rec/rtl|D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/digi_tube_drv.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+D:/Software/FPGA/FPGA_Project/infrared_rec/rtl
+Z8 tCvgOpt 0
+vinfrared_rec_v3
+R1
+!i10b 1
+!s100 ^3M9>lf1K9Q<mL_^7mDK?1
+R2
+IY@=QTJS`8>52`ZQ5dJaUn1
+R3
+R0
+w1769671304
+8D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/infrared_rec_v3.v
+FD:/Software/FPGA/FPGA_Project/infrared_rec/rtl/infrared_rec_v3.v
+!i122 0
+L0 1 193
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/infrared_rec_v3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Software/FPGA/FPGA_Project/infrared_rec/rtl|D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/infrared_rec_v3.v|
+!i113 1
+R6
+R7
+R8
+vtb_ir_rec
+R1
+!i10b 1
+!s100 oQ?P=COFk[d?VYHkKXO2f3
+R2
+IkzGg>M_[zYjjh4PbH8RcB2
+R3
+R0
+w1769668009
+8D:/Software/FPGA/FPGA_Project/infrared_rec/prj/../rtl/tb_ir_rec.v
+FD:/Software/FPGA/FPGA_Project/infrared_rec/prj/../rtl/tb_ir_rec.v
+!i122 3
+L0 3 94
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Software/FPGA/FPGA_Project/infrared_rec/prj/../rtl/tb_ir_rec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Software/FPGA/FPGA_Project/infrared_rec/prj/../rtl|D:/Software/FPGA/FPGA_Project/infrared_rec/prj/../rtl/tb_ir_rec.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+D:/Software/FPGA/FPGA_Project/infrared_rec/prj/../rtl
+R8
+vtop_infrared_rec_v2
+R1
+!i10b 1
+!s100 Y<k3hPU;VW][n1l1z0d;R0
+R2
+I0NQ4d<5JoLRGdn[QSCflA0
+R3
+R0
+w1769666473
+8D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/top_infrared_rec_v2.v
+FD:/Software/FPGA/FPGA_Project/infrared_rec/rtl/top_infrared_rec_v2.v
+!i122 1
+L0 1 42
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/top_infrared_rec_v2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Software/FPGA/FPGA_Project/infrared_rec/rtl|D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/top_infrared_rec_v2.v|
+!i113 1
+R6
+R7
+R8

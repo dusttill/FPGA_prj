@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at digi_tube_drv.v(19): always construct contains both blocking and non-blocking assignments File: D:/Software/FPGA/FPGA_Project/infrared_rec/rtl/digi_tube_drv.v Line: 19

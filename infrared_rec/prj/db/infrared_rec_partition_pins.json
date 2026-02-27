@@ -1,0 +1,69 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "tube_seg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_seg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_bit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_bit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_bit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tube_bit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ir_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+
+State Machine - |top_infrared_rec_v2|Infrared_Standard_NEC:u_ir_new|state
+Name state.S_DONE state.S_DATA_RECV state.S_LEAD_CHECK state.S_IDLE 
+state.S_IDLE 0 0 0 0 
+state.S_LEAD_CHECK 0 0 1 1 
+state.S_DATA_RECV 0 1 0 1 
+state.S_DONE 1 0 0 1 
