@@ -1,0 +1,27 @@
+
+State Machine - |uart_eeprom_demo|eeprom2uart_control:u_eeprom2uart_control|state
+Name state.S_TX_DONE state.S_TX_WAIT state.S_TX_REQ state.S_READ_WAIT state.S_READ_REQ state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_READ_REQ 0 0 0 0 1 1 
+state.S_READ_WAIT 0 0 0 1 0 1 
+state.S_TX_REQ 0 0 1 0 0 1 
+state.S_TX_WAIT 0 1 0 0 0 1 
+state.S_TX_DONE 1 0 0 0 0 1 
+
+State Machine - |uart_eeprom_demo|eeprom_iic_drv:u_eeprom_iic_drv|c_state
+Name c_state.S_READ_BYTE c_state.S_DEV_RADDR c_state.S_RESTART c_state.S_WRITE_BYTE c_state.S_REG_ADDR c_state.S_DEV_WADDR c_state.S_START c_state.S_IDLE c_state.S_STOP 
+c_state.S_IDLE 0 0 0 0 0 0 0 0 0 
+c_state.S_START 0 0 0 0 0 0 1 1 0 
+c_state.S_DEV_WADDR 0 0 0 0 0 1 0 1 0 
+c_state.S_REG_ADDR 0 0 0 0 1 0 0 1 0 
+c_state.S_WRITE_BYTE 0 0 0 1 0 0 0 1 0 
+c_state.S_RESTART 0 0 1 0 0 0 0 1 0 
+c_state.S_DEV_RADDR 0 1 0 0 0 0 0 1 0 
+c_state.S_READ_BYTE 1 0 0 0 0 0 0 1 0 
+c_state.S_STOP 0 0 0 0 0 0 0 1 1 
+
+State Machine - |uart_eeprom_demo|uart2eeprom_control:u_uart2eeprom_control|state
+Name state.S_IDLE state.S_WRITE_WAIT state.S_WRITE_REQ 
+state.S_IDLE 0 0 0 
+state.S_WRITE_REQ 1 0 1 
+state.S_WRITE_WAIT 1 1 0 

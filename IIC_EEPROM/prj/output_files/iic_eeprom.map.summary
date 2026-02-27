@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Feb 27 12:53:05 2026
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : iic_eeprom
+Top-level Entity Name : uart_eeprom_demo
+Family : Cyclone IV E
+Total logic elements : 2,972
+    Total combinational functions : 2,912
+    Dedicated logic registers : 1,319
+Total registers : 1319
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
